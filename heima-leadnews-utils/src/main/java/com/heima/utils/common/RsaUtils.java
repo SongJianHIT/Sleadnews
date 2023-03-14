@@ -9,6 +9,7 @@ import java.security.spec.PKCS8EncodedKeySpec;
 import java.security.spec.X509EncodedKeySpec;
 import java.util.Base64;
 
+
 /**
  * @author 黑马程序员
  */
@@ -47,7 +48,7 @@ public class RsaUtils {
      * @throws Exception
      */
     private static PublicKey getPublicKey(byte[] bytes) throws Exception {
-        bytes = Base64.getDecoder().decode(bytes);
+        bytes = Base64.getMimeDecoder().decode(bytes);
         X509EncodedKeySpec spec = new X509EncodedKeySpec(bytes);
         KeyFactory factory = KeyFactory.getInstance("RSA");
         return factory.generatePublic(spec);
@@ -61,7 +62,7 @@ public class RsaUtils {
      * @throws Exception
      */
     private static PrivateKey getPrivateKey(byte[] bytes) throws NoSuchAlgorithmException, InvalidKeySpecException {
-        bytes = Base64.getDecoder().decode(bytes);
+        bytes = Base64.getMimeDecoder().decode(bytes);
         PKCS8EncodedKeySpec spec = new PKCS8EncodedKeySpec(bytes);
         KeyFactory factory = KeyFactory.getInstance("RSA");
         return factory.generatePrivate(spec);

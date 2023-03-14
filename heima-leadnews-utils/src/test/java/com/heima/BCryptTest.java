@@ -14,7 +14,8 @@ public class BCryptTest {
         String salt = BCrypt.gensalt();
         System.out.println(salt);
         //加密
-        String pwd = BCrypt.hashpw("123456", salt);
+        // $2a$10$PhDUdMVcPDFaKdQOu5x.4uhigBiupt4zek/Ox2N54aYG/mcFFZvYG
+        String pwd = BCrypt.hashpw("admin", salt);
         System.out.println(pwd);
     }
 
@@ -23,8 +24,8 @@ public class BCryptTest {
      */
     @Test
     public void testMatch(){
-        String pwd = "$2a$10$1ZNMO89VzYrpzw2K.cF8QeJ/smPrpFG3zkYPH7b0aueoIcr205n6q";
-        boolean flag = BCrypt.checkpw("12345", pwd);
+        String pwd = "$2a$10$uvFD7Ea2QH/S3pCg/tZ0Xer.VlapExhFwK1K32JxeAPM0zGRuhXhm";
+        boolean flag = BCrypt.checkpw("123456", pwd);
         System.out.println(flag);
     }
 }

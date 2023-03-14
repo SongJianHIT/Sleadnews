@@ -12,8 +12,8 @@
         <module name="heima-leadnews-wemedia-gateway" />
         <module name="heima-leadnews-behavior" />
         <module name="heima-leadnews-wemedia" />
-        <module name="heima-leadnews-user" />
         <module name="heima-leadnews-article" />
+        <module name="heima-leadnews-user" />
         <module name="xxljob-demo" />
         <module name="heima-leadnews-api" />
         <module name="heima-leadnews-schedule" />
@@ -22,7 +22,6 @@
         <module name="heima-leadnews-search" />
         <module name="heima-leadnews-common" />
         <module name="heima-leadnews-model" />
-        <module name="heima-leadnews-service" />
         <module name="heima-leadnews-gateway" />
         <module name="heima-leadnews-seata" />
       </profile>
@@ -41,7 +40,7 @@
       <module name="heima-leadnews-schedule" options="-parameters" />
       <module name="heima-leadnews-search" options="-parameters" />
       <module name="heima-leadnews-seata" options="-parameters" />
-      <module name="heima-leadnews-service" options="-parameters" />
+      <module name="heima-leadnews-service" options="" />
       <module name="heima-leadnews-user" options="-parameters" />
       <module name="heima-leadnews-utils" options="-parameters" />
       <module name="heima-leadnews-wemedia" options="-parameters" />

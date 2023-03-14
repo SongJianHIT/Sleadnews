@@ -19,7 +19,7 @@ public class JwtUtils {
     private static final String JWT_PAYLOAD_USER_KEY = "user";
 
     /**
-     * 私钥加密token
+     * 私钥加密token，单位为分钟
      *
      * @param info   载荷中的数据
      * @param privateKey 私钥
@@ -40,7 +40,7 @@ public class JwtUtils {
     }
 
     /**
-     * 私钥加密token
+     * 私钥加密token，单位为秒
      *
      * @param info   载荷中的数据
      * @param privateKey 私钥
@@ -49,9 +49,13 @@ public class JwtUtils {
      */
     public static String generateTokenExpireInSeconds(Object info, PrivateKey privateKey, int expire) {
         return Jwts.builder()
+                // 往 jwt 载荷中存入数据
                 .claim(JWT_PAYLOAD_USER_KEY, JsonUtils.toString(info))
+                // 设置固定id的key
                 .setId(createJTI())
+                // 设置过期时间
                 .setExpiration(DateTime.now().plusSeconds(expire).toDate())
+                // 设置签名算法与密钥
                 .signWith(privateKey, SignatureAlgorithm.RS256)
                 .compact();
     }
