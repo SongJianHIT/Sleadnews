@@ -12,7 +12,6 @@
         <module name="heima-leadnews-wemedia-gateway" />
         <module name="heima-leadnews-behavior" />
         <module name="heima-leadnews-wemedia" />
-        <module name="heima-leadnews-article" />
         <module name="heima-leadnews-user" />
         <module name="xxljob-demo" />
         <module name="heima-leadnews-api" />
@@ -25,13 +24,16 @@
         <module name="heima-leadnews-seata" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="heima-leadnews-article" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="freemarker-demo" options="-parameters" />
       <module name="heima-leadnews-api" options="-parameters" />
       <module name="heima-leadnews-app-gateway" options="-parameters" />
-      <module name="heima-leadnews-article" options="-parameters" />
+      <module name="heima-leadnews-article" options="" />
       <module name="heima-leadnews-behavior" options="-parameters" />
       <module name="heima-leadnews-common" options="-parameters" />
       <module name="heima-leadnews-gateway" options="" />
