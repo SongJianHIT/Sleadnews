@@ -7,7 +7,9 @@ package com.heima.user.service.impl;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.heima.common.dtos.AppHttpCodeEnum;
 import com.heima.common.dtos.ResponseResult;
+import com.heima.common.exception.LeadNewsException;
 import com.heima.model.user.dtos.LoginDto;
 import com.heima.model.user.pojos.ApUser;
 import com.heima.user.mapper.ApUserMapper;
@@ -59,14 +61,14 @@ public class ApUserServiceImpl extends ServiceImpl<ApUserMapper, ApUser> impleme
             // 查询用户是否存在
             ApUser user = getOne(new QueryWrapper<ApUser>().eq("phone", loginDto.getPhone()));
             if (user == null) {
-                throw new RuntimeException("用户不存在");
+                throw new LeadNewsException(AppHttpCodeEnum.AP_USER_DATA_NOT_EXIST);
             }
 
             // 判断密码是否正确
             // 第一个参数：用户登入输入密码；第二个参数：数据库存储的真实密码
             if(!BCrypt.checkpw(loginDto.getPassword(), user.getPassword())) {
                 // 校验失败
-                throw new RuntimeException("密码错误");
+                throw new LeadNewsException(AppHttpCodeEnum.LOGIN_PASSWORD_ERROR);
             }
 
             // 生成 Token
