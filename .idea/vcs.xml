@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/heima-leadnews-gateway/heima-leadnews-app-gateway" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/heima-leadnews-service/heima-leadnews-article" vcs="Git" />
   </component>
 </project>

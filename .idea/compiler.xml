@@ -22,7 +22,6 @@
         <module name="heima-leadnews-search" />
         <module name="heima-leadnews-common" />
         <module name="heima-leadnews-model" />
-        <module name="heima-leadnews-gateway" />
         <module name="heima-leadnews-seata" />
       </profile>
     </annotationProcessing>
@@ -35,7 +34,7 @@
       <module name="heima-leadnews-article" options="-parameters" />
       <module name="heima-leadnews-behavior" options="-parameters" />
       <module name="heima-leadnews-common" options="-parameters" />
-      <module name="heima-leadnews-gateway" options="-parameters" />
+      <module name="heima-leadnews-gateway" options="" />
       <module name="heima-leadnews-model" options="-parameters" />
       <module name="heima-leadnews-schedule" options="-parameters" />
       <module name="heima-leadnews-search" options="-parameters" />
