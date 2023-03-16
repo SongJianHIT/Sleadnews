@@ -12,6 +12,14 @@
     <artifactId>heima-leadnews-common</artifactId>
 
     <dependencies>
+
+        <!--MinIO-->
+        <dependency>
+            <groupId>io.minio</groupId>
+            <artifactId>minio</artifactId>
+            <version>7.1.0</version>
+        </dependency>
+
         <dependency>
             <groupId>com.heima</groupId>
             <artifactId>heima-leadnews-utils</artifactId>
@@ -31,6 +39,6 @@
             <artifactId>mybatis-plus-extension</artifactId>
             <version>3.1.1</version>
         </dependency>
-        
+
     </dependencies>
 </project>
