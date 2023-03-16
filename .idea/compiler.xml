@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <directory url="file://$PROJECT_DIR$/heima-leadnews-service/heima-leadnews-article/src/main/resources/archetype-resources" includeSubdirectories="true" />
+    </excludeFromCompile>
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
       <profile name="Maven default annotation processors profile" enabled="true">
@@ -13,6 +16,7 @@
         <module name="heima-leadnews-behavior" />
         <module name="heima-leadnews-wemedia" />
         <module name="heima-leadnews-user" />
+        <module name="heima-leadnews-article" />
         <module name="xxljob-demo" />
         <module name="heima-leadnews-api" />
         <module name="heima-leadnews-schedule" />
@@ -24,16 +28,13 @@
         <module name="heima-leadnews-seata" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="heima-leadnews-article" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="freemarker-demo" options="-parameters" />
       <module name="heima-leadnews-api" options="-parameters" />
       <module name="heima-leadnews-app-gateway" options="-parameters" />
-      <module name="heima-leadnews-article" options="" />
+      <module name="heima-leadnews-article" options="-parameters" />
       <module name="heima-leadnews-behavior" options="-parameters" />
       <module name="heima-leadnews-common" options="-parameters" />
       <module name="heima-leadnews-gateway" options="" />

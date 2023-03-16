@@ -11,11 +11,6 @@
         <option value="$PROJECT_DIR$/heima-leadnews-service/heima-leadnews-user/pom.xml" />
       </list>
     </option>
-    <option name="ignoredFiles">
-      <set>
-        <option value="$PROJECT_DIR$/heima-leadnews-service/heima-leadnews-article/pom.xml" />
-      </set>
-    </option>
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
