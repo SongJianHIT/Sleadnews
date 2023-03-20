@@ -24,8 +24,8 @@ public class BCryptTest {
      */
     @Test
     public void testMatch(){
-        String pwd = "$2a$10$uvFD7Ea2QH/S3pCg/tZ0Xer.VlapExhFwK1K32JxeAPM0zGRuhXhm";
-        boolean flag = BCrypt.checkpw("123456", pwd);
+        String pwd = "$2a$10$jnVLy6dZx3EWuNWJDfgss.KWbMQeZc/Ea1hwhsQmi/mMEDd9qNXC2";
+        boolean flag = BCrypt.checkpw("admin", pwd);
         System.out.println(flag);
     }
 }
