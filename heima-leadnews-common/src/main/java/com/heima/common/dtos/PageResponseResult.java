@@ -1,7 +1,10 @@
 package com.heima.common.dtos;
 
+import lombok.Builder;
+
 import java.io.Serializable;
 
+@Builder
 public class PageResponseResult extends ResponseResult implements Serializable {
     private Integer currentPage;
     private Integer size;

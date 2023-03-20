@@ -1,5 +1,8 @@
 package com.heima.utils.common;
 
+/**
+ * ThreadLocalUtils 工具类
+ */
 public class ThreadLocalUtils {
 
     private final static ThreadLocal<Object> userThreadLocal = new ThreadLocal<>();
@@ -15,7 +18,7 @@ public class ThreadLocalUtils {
      * 获取线程中的数据
      * @return
      */
-    public static Object get( ){
+    public static Object get(){
         return userThreadLocal.get();
     }
 
