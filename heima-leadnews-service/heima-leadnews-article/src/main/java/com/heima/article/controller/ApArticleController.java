@@ -8,6 +8,7 @@ package com.heima.article.controller;
 import com.heima.article.common.ApArticleConstant;
 import com.heima.article.service.ApArticleService;
 import com.heima.common.dtos.ResponseResult;
+import com.heima.model.article.dtos.ApArticleDto;
 import com.heima.model.article.dtos.ArticleDto;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -60,6 +61,16 @@ public class ApArticleController {
     public ResponseResult loadNew(@RequestBody ArticleDto dto) {
         //1 代表上拉(小于判断)
         return apArticleService.loadApArticle(dto, ApArticleConstant.DOWNBEHAVE);
+    }
+
+    /**
+     * 保存 app 文章（新增或修改）
+     * @param dto
+     * @return
+     */
+    @PostMapping("/save")
+    public Long save(@RequestBody ApArticleDto dto) {
+        return apArticleService.saveApArticle(dto);
     }
 }
 
